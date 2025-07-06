@@ -11,7 +11,7 @@ This project is a simple asynchronous API that accepts a URL and returns a simul
 - Asynchronous background processing (non-blocking)
 - Notifies client via webhook when job completes
 - Retrieve job status and screenshot image
-- SQLite for job storage
+- SQLite for job storage.
 
 ---
 
