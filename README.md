@@ -57,7 +57,7 @@ this as png file
 6. **Run the server**
 ```bash
 python app.py
-
+```
 '''
 You will get this output:
 
@@ -69,7 +69,6 @@ Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
 '''
-```
 
 7. **Submit URL for Screenshot (POST /screenshots)**
 ```bash
@@ -78,6 +77,20 @@ curl -X POST http://localhost:5000/screenshots -H "Content-Type: application/jso
 '''
 Here,
 "https://webhook.site/e71f9397-89d5-40f7-b44a-c85944f71a17" this is my workbook id link you can replace with yours.
+
+For example,
+```bash
+{
+  "job_id": "5182367e-15a8-443c-8687-b92e20bf8f4c",
+  "status": "queued"
+}
+'''
 ```
 
-8. 
+8. **Check status**
+Copy the job_id from the response an paste on plave YOUR_JOB_ID
+```bash
+curl http://localhost:5000/screenshots/YOUR_JOB_ID/status
+```
+
+
