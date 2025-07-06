@@ -86,13 +86,13 @@ curl -X POST http://localhost:5000/screenshots -H "Content-Type: application/jso
 ```
 
 8. **Check status**
-# Copy the job_id from the response an paste on plave YOUR_JOB_ID
+Copy the job_id from the response an paste on plave YOUR_JOB_ID
 ```bash
 curl http://localhost:5000/screenshots/YOUR_JOB_ID/status
 ```
-# From above example "5182367e-15a8-443c-8687-b92e20bf8f4c" is my job_id
+From above example "5182367e-15a8-443c-8687-b92e20bf8f4c" is my job_id
 
-# after waiting for 5 seconds:
+after waiting for 5 seconds:
 ```bash
 {
   "job_id": "5182367e-15a8-443c-8687-b92e20bf8f4c",
@@ -100,7 +100,7 @@ curl http://localhost:5000/screenshots/YOUR_JOB_ID/status
 }
 ```
 
-# And if the tasks fail:
+And if the tasks fail:
 ```bash
 {
   "job_id": "5182367e-15a8-443c-8687-b92e20bf8f4c",
@@ -108,12 +108,12 @@ curl http://localhost:5000/screenshots/YOUR_JOB_ID/status
 }
 ```
 
-# on your workbook.site 
-# for here "https://webhook.site/#!/view/e71f9397-89d5-40f7-b44a-c85944f71a17/55874cbe-228a-4dda-8b78-8dee58f3c5ba" this is my site after you visite the site 
+on your workbook.site 
+for here "https://webhook.site/#!/view/e71f9397-89d5-40f7-b44a-c85944f71a17/55874cbe-228a-4dda-8b78-8dee58f3c5ba" this is my site after you visite the site 
 ![image](https://github.com/user-attachments/assets/4081107a-1391-4797-8692-c9342237db94)
 you can this result
 
-# If you want to download screenshot:
+If you want to download screenshot:
 ```bash
 curl http://localhost:5000/screenshots/YOUR_JOB_ID --output downloaded_screenshot.png
 ```
