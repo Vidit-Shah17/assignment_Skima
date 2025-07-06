@@ -47,12 +47,37 @@ pip install -r requirements.txt
 ```
 
 5. **Adding image as name placeholder.png**
+```bash
 Place a PNG file named placeholder.png in the project root. \n
 i have used
 ![placeholder](https://github.com/user-attachments/assets/3ab257a4-602c-4f06-a864-7f1eac285634)
 this as png file
+```
 
 6. **Run the server**
 ```bash
 python app.py
+
+'''
+You will get this output:
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+'''
 ```
+
+7. **Submit URL for Screenshot (POST /screenshots)**
+```bash
+# Open new terminal and write
+curl -X POST http://localhost:5000/screenshots -H "Content-Type: application/json" -d "{\"url\":\"https://example.com\",\"webhook_url\":\"https://webhook.site/e71f9397-89d5-40f7-b44a-c85944f71a17\"}"
+'''
+Here,
+"https://webhook.site/e71f9397-89d5-40f7-b44a-c85944f71a17" this is my workbook id link you can replace with yours.
+```
+
+8. 
