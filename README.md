@@ -31,6 +31,7 @@ This project is a simple asynchronous API that accepts a URL and returns a simul
 ```bash
 git clone https://github.com/Vidit-Shah17/assignment_Skima
 cd assignment_Skima
+```
 
 2. **Create virtual env**
 python -m venv venv
