@@ -59,7 +59,7 @@ this as png file
 python app.py
 ```
 '''
-You will get this output:
+# You will get this output:
 
  * Serving Flask app 'app'
  * Debug mode: on
@@ -74,23 +74,51 @@ Press CTRL+C to quit
 ```bash
 # Open new terminal and write
 curl -X POST http://localhost:5000/screenshots -H "Content-Type: application/json" -d "{\"url\":\"https://example.com\",\"webhook_url\":\"https://webhook.site/e71f9397-89d5-40f7-b44a-c85944f71a17\"}"
-'''
-Here,
-"https://webhook.site/e71f9397-89d5-40f7-b44a-c85944f71a17" this is my workbook id link you can replace with yours.
-
-For example,
-```bash
+# Here,
+# "https://webhook.site/e71f9397-89d5-40f7-b44a-c85944f71a17" this is my workbook id link you can replace with yours.
+#
+# For example,
+# after run above you will get this type of output
 {
   "job_id": "5182367e-15a8-443c-8687-b92e20bf8f4c",
   "status": "queued"
 }
-'''
 ```
 
 8. **Check status**
-Copy the job_id from the response an paste on plave YOUR_JOB_ID
+# Copy the job_id from the response an paste on plave YOUR_JOB_ID
 ```bash
 curl http://localhost:5000/screenshots/YOUR_JOB_ID/status
 ```
+# From above example "5182367e-15a8-443c-8687-b92e20bf8f4c" is my job_id
+
+# after waiting for 5 seconds:
+```bash
+{
+  "job_id": "5182367e-15a8-443c-8687-b92e20bf8f4c",
+  "status": "completed"
+}
+```
+
+# And if the tasks fail:
+```bash
+{
+  "job_id": "5182367e-15a8-443c-8687-b92e20bf8f4c",
+  "status": "failed"
+}
+```
+
+# on your workbook.site 
+# for here "https://webhook.site/#!/view/e71f9397-89d5-40f7-b44a-c85944f71a17/55874cbe-228a-4dda-8b78-8dee58f3c5ba" this is my site after you visite the site 
+![image](https://github.com/user-attachments/assets/4081107a-1391-4797-8692-c9342237db94)
+you can this result
+
+# If you want to download screenshot:
+```bash
+curl http://localhost:5000/screenshots/YOUR_JOB_ID --output downloaded_screenshot.png
+```
+
+
+
 
 
