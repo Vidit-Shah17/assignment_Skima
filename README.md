@@ -34,17 +34,25 @@ cd assignment_Skima
 ```
 
 2. **Create virtual env**
+```bash
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+# Activating the venv
+linux: source venv/bin/activate   
+Windows: venv\Scripts\activate
+```
 
-3. **Install dependencies**
+4. **Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-4. **Adding image as name placeholder.png**
-Place a PNG file named placeholder.png in the project root. 
+5. **Adding image as name placeholder.png**
+Place a PNG file named placeholder.png in the project root. \n
 i have used
 ![placeholder](https://github.com/user-attachments/assets/3ab257a4-602c-4f06-a864-7f1eac285634)
 this as png file
 
-5. **Run the server**
+6. **Run the server**
+```bash
 python app.py
+```
